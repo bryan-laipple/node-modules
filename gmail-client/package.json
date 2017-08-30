@@ -1,0 +1,36 @@
+{
+  "name": "@thinktank/gmail-client",
+  "version": "0.1.0",
+  "description": "IMAP Client for Gmail",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha test.js"
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "text-summary"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinktank-repo/common-test-node-modules.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinktank-repo/common-test-node-modules/issues"
+  },
+  "homepage": "https://github.com/thinktank-repo/common-test-node-modules#readme",
+  "dependencies": {
+    "emailjs-imap-client": "2.0.6",
+    "mailparser": "0.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.1",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.2",
+    "proxyquire": "^1.8.0",
+    "sinon": "^2.3.4"
+  }
+}

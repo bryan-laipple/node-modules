@@ -1,0 +1,69 @@
+{
+  "/record": {
+    "post": {
+      "payload": {
+        "name": {
+          "type": "string",
+          "required": true,
+          "minLength": 3
+        },
+        "email": {
+          "type": "string",
+          "required": true,
+          "format": "email"
+        },
+        "nickname": {
+          "type": "string",
+          "required": false,
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "/record/:id": {
+    "put": {
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true,
+          "format": "uuid"
+        }
+      },
+      "payload": {
+        "name": {
+          "type": "string",
+          "required": false,
+          "minLength": 3
+        },
+        "email": {
+          "type": "string",
+          "required": false,
+          "format": "email"
+        },
+        "nickname": {
+          "type": "string",
+          "required": false,
+          "minLength": 1
+        }
+      }
+    },
+    "get": {
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true,
+          "format": "uuid"
+        }
+      }
+    },
+    "delete": {
+      "params": {
+        "id": {
+          "type": "string",
+          "required": true,
+          "format": "uuid"
+        }
+      }
+    }
+  }
+}
