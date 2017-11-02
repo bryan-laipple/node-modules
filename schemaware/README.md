@@ -11,15 +11,15 @@ This section provides a quick overview of the basic steps for installation and s
 
 1. Install with NPM:
 ```
-npm install --save @thinktank/schemaware
+npm install --save @<my-private-repo>/schemaware
 ```
 2. Import the Schemaware constructor as well as necessary Error types (for use in error-handling middleware):
 ```
-import {Schemaware, NotFoundError, SchemaValidationError} from '@thinktank/schemaware';
+import {Schemaware, NotFoundError, SchemaValidationError} from '@<my-private-repo>/schemaware';
 ```
 or
 ```
-const SchemawareExports = require('@thinktank/schemaware');
+const SchemawareExports = require('@<my-private-repo>/schemaware');
 const Schemaware = SchemawareExports.Schemaware;
 const NotFoundError = SchemawareExports.NotFoundError;
 const SchemaValidationError = SchemawareExports.SchemaValidationError;

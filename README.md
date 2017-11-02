@@ -1,5 +1,5 @@
 # Common npm packages for testing
-This repository contains various npm projects used to publish common utility code to Thinktank's private npm registry.
+This repository contains various npm projects used to publish common utility code to a private npm registry.
 
 ## Safe Publish Script
 This project contains a `safe-publish.sh` script that can be used to safely publish updates to packages.  It contains a check for the correct scope in the name field of the corresponding `package.json`.  It requires 1 argument which is the directory name of the project to publish.  For example:
@@ -11,18 +11,18 @@ This project contains a `safe-publish.sh` script that can be used to safely publ
 Read more about preparing to publish in the following sections.
 
 ## Publishing
-By default `npm` will publish to the public registry.  However, we want to publish our packages with *restricted* access to Thinktank's private npm registry.  We override the default behavior by using a scoped package name in the `package.json` file (e.g. **`@thinktank/my-package-name`**). Therefore, ***it is extremely important to set the package name appropriately***. For additional safety, you can specify the `--access restricted` option when publishing.  Take a look at the documentation for the [npm publish](https://docs.npmjs.com/cli/publish) command for other options and publishing considerations.
+By default `npm` will publish to the public registry.  However, we want to publish our packages with *restricted* access to a private npm registry.  We override the default behavior by using a scoped package name in the `package.json` file (e.g. **`@my-private-repo/my-package-name`**). Therefore, ***it is extremely important to set the package name appropriately***. For additional safety, you can specify the `--access restricted` option when publishing.  Take a look at the documentation for the [npm publish](https://docs.npmjs.com/cli/publish) command for other options and publishing considerations.
 
-To publish to a the Thinktank private registry you must first be added as a user and execute `npm login` at the command line.  This will store an entry into the `~/.npmrc` file with the registry name as a key and an authentication token as the value.  You may already be logged in and can verify by running `cat ~/.npmrc`.  You can learn more about the `npmrc` config file [here](https://docs.npmjs.com/files/npmrc).
+To publish to a private registry you must first be added as a user and execute `npm login` at the command line.  This will store an entry into the `~/.npmrc` file with the registry name as a key and an authentication token as the value.  You may already be logged in and can verify by running `cat ~/.npmrc`.  You can learn more about the `npmrc` config file [here](https://docs.npmjs.com/files/npmrc).
 
-Once properly authenticated and the package name is set with the appropriate **`@thinktank`** scope, then you can publish by running the following command in the root directory of the project you want to publish (i.e. the directory containing the `package.json` file):
+Once properly authenticated and the package name is set with the appropriate scope (e.g. **`@my-private-repo`**), then you can publish by running the following command in the root directory of the project you want to publish (i.e. the directory containing the `package.json` file):
 ```
 npm publish
 ```
 ### Tags and Versions
 By default the `npm publish` command tags the version with **`latest`**.  This can be overriden with the `--tag <tag>` option of the `publish` command.  Also, tags can be managed for a published package using the `npm dist-tag` command. To add a **`beta`** tag for example:
 ```
-npm dist-tag add @thinktank/my-package-name@0.1.0 beta
+npm dist-tag add @my-private-repo/my-package-name@0.1.0 beta
 ```
 See the documentation for the [npm dist-tag](https://docs.npmjs.com/cli/dist-tag) command for more information on adding, removing and listing tags.
 

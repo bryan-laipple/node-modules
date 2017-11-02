@@ -1,5 +1,5 @@
 {
-  "name": "@thinktank/gmail-client",
+  "name": "@<my-private-repo>/gmail-client",
   "version": "0.1.0",
   "description": "IMAP Client for Gmail",
   "main": "index.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thinktank-repo/common-test-node-modules.git"
+    "url": "git+https://github.com/bryan-laipple/node-modules.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thinktank-repo/common-test-node-modules/issues"
+    "url": "https://github.com/bryan-laipple/node-modules/issues"
   },
-  "homepage": "https://github.com/thinktank-repo/common-test-node-modules#readme",
+  "homepage": "https://github.com/bryan-laipple/node-modules#readme",
   "dependencies": {
     "emailjs-imap-client": "2.0.6",
     "mailparser": "0.6.0"

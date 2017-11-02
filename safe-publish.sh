@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-scope="@thinktank"
+#TODO either hard code scope to private repo name, or update script and documentation for another arg
+# scope="@my-private-repo"
 dir=$1
 packageJson="${dir}/package.json"
 safe=$(cat ${packageJson} | jq --arg scope ${scope}"/" '.name | startswith($scope)')

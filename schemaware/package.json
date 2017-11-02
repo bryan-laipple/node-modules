@@ -1,5 +1,5 @@
 {
-  "name": "@thinktank/schemaware",
+  "name": "@<my-private-repo>/schemaware",
   "version": "0.4.0",
   "description": "Configure ExpressJS Middleware through JSON",
   "main": "dist/index.js",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thinktank-repo/schemaware.git"
+    "url": "git+https://github.com/bryan-laipple/node-modules.git"
   },
   "author": "Bryan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thinktank-repo/schemaware/issues"
+    "url": "https://github.com/bryan-laipple/node-modules/issues"
   },
-  "homepage": "https://github.com/thinktank-repo/schemaware#readme",
+  "homepage": "https://github.com/bryan-laipple/node-modules#readme",
   "dependencies": {
     "@types/express": "^4.0.35",
     "debug": "^2.6.8",
